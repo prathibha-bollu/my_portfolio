@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Futuristic Portfolio Design System - All colors, gradients, fonts, etc defined here.
+All colors MUST be HSL. Glassmorphism and cyberpunk theme. */
+
+
+
+@layer base {
+  :root {
+    /* Base Dark Theme - Cyberpunk Navy/Black */
+    --background: 220 25% 6%;
+    --background-secondary: 220 20% 8%;
+    --foreground: 210 40% 98%;
+
+    /* Glassmorphism Cards */
+    --card: 220 25% 6% / 0.4;
+    --card-foreground: 210 40% 98%;
+    --glass: 210 40% 98% / 0.05;
+    --glass-border: 210 40% 98% / 0.1;
+
+    /* Popover */
+    --popover: 220 25% 8% / 0.9;
+    --popover-foreground: 210 40% 98%;
+
+    /* Primary - Electric Cyan */
+    --primary: 190 100% 50%;
+    --primary-foreground: 220 25% 6%;
+    --primary-glow: 190 100% 50% / 0.3;
+
+    /* Secondary - Deep Purple */
+    --secondary: 270 75% 60%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-glow: 270 75% 60% / 0.3;
+
+    /* Accent - Neon Green */
+    --accent: 140 100% 50%;
+    --accent-foreground: 220 25% 6%;
+    --accent-glow: 140 100% 50% / 0.3;
+
+    /* Muted */
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 5% 65%;
+
+    /* Destructive - Neon Red */
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders and Inputs */
+    --border: 210 40% 98% / 0.1;
+    --input: 220 15% 15%;
+    --ring: 190 100% 50%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(190 100% 50%) 0%, hsl(270 75% 60%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(270 75% 60%) 0%, hsl(140 100% 50%) 100%);
+    --gradient-bg: radial-gradient(ellipse at top, hsl(220 25% 8%) 0%, hsl(220 25% 6%) 100%);
+    --gradient-mesh: 
+      radial-gradient(at 40% 20%, hsl(190 100% 50% / 0.1) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(270 75% 60% / 0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(140 100% 50% / 0.1) 0px, transparent 50%);
+
+    /* Shadows and Glows */
+    --shadow-glass: 0 8px 32px 0 hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow));
+    --shadow-accent-glow: 0 0 40px hsl(var(--accent-glow));
+    --shadow-secondary-glow: 0 0 40px hsl(var(--secondary-glow));
+
+    /* Border Radius */
+    --radius: 1rem;
+
+    /* Typography */
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: var(--gradient-bg);
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-mesh);
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+@layer components {
+  .glass {
+    background: hsl(var(--glass));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: var(--shadow-glass);
+  }
+
+  .glass-card {
+    @apply glass rounded-[var(--radius)];
+  }
+
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-accent {
+    box-shadow: var(--shadow-accent-glow);
+  }
+
+  .glow-secondary {
+    box-shadow: var(--shadow-secondary-glow);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+
+  .hover-glow {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .terminal-cursor::after {
+    content: '|';
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
