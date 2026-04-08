@@ -4,12 +4,12 @@ import { Award, Calendar, MapPin, TrendingUp } from 'lucide-react';
 
 const experiences = [
   {
-    title: 'UX and Front-End Developer',
+    title: 'Full-Stack Developer',
     company: "Let's Solve Analytics",
     location: 'Finland',
     duration: 'January 2025 - Present',
     description: 'Designing and developing user-friendly interfaces and prototypes using Figma, focusing on user-friendly interfaces. Developing front-end web interfaces with React and Vue.js, along with HTML and CSS to implement designs.',
-    technologies: ['React', 'Vue.js', 'Figma', 'HTML', 'CSS'],
+    technologies: ['React', 'Vue.js', 'Figma', "llm/AI", 'Front-end Development'],
     achievements: [
       'Contributed to the integration of LLM/AI to assist doctors',
       'Collaborated with the team on training, fine-tuning, and front-end implementation',

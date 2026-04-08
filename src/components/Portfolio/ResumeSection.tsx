@@ -1,4 +1,4 @@
-import resumeFile from '@/assets/resume.pdf';
+import resumeFile from '@/assets/CV_Prathibha_Bollu_Software_Engineer.pdf';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
