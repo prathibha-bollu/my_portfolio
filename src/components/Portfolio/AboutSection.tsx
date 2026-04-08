@@ -8,14 +8,12 @@ const techStack = [
   { name: 'JavaScript', category: 'Frontend' },
   { name: 'HTML', category: 'Frontend' },
   { name: 'CSS', category: 'Frontend' },
-  { name: 'Figma', category: 'Frontend' },
-   
+
   // Backend
   { name: 'PHP', category: 'Backend' },
   { name: 'MySQL', category: 'Backend' },
   { name: 'RESTful APIs', category: 'Backend' },
-  { name: 'Craft CMS', category: 'Backend' },
-  { name: 'Twig', category: 'Backend' },
+  { name: 'Node.js', category: 'Backend' },
   
   // DevOps & Tools
   { name: 'AWS', category: 'DevOps' },
@@ -47,10 +45,10 @@ const AboutSection = () => {
           <div className="space-y-6">
             <Card className="glass-card p-8 hover-lift">
               <h3 className="text-2xl font-semibold text-primary mb-4">
-                Software Developer & UX Enthusiast
+                Full Stack Developer
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                I am a Software Developer building scalable, 
+                I am a Full stack developer building scalable, 
                 interactive web applications using JavaScript, React, PHP, and MySQL. 
                 Skilled in both frontend and backend development, with hands-on exposure 
                 to LLMs/AI integrations and API development.
