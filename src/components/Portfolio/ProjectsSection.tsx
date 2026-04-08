@@ -9,8 +9,18 @@ import { Card } from '@/components/ui/card';
 import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
-  {
+ {
   id: 1,
+  title: 'Food Scanner - AI Nutritional Grading App',
+  description: 'A mobile app that helps users make healthier food choices by scanning barcodes or entering food manually. It uses AI to analyze nutritional data and instantly assign a health grade (A–D). Designed for elderly users, parents, diabetics, and health-conscious individuals.',
+  image: project1, // replace with your actual image if you have one
+  technologies: [ 'React Native (Expo)', 'FastAPI','MongoDB','Google Gemini AI' ],
+  demoUrl: 'https://drive.google.com/file/d/1_BnstK_9LTBWQ24kJJYy-o2shf9ZlUmJ/view?usp=sharing',
+  githubUrl: 'https://github.com/prathibha-bollu/Food_scaning'
+}
+,
+  {
+  id: 2,
   title: 'Meal Prep Web Application',
   description: 'A web application that helps users plan and track their meals efficiently. Features include recipe management, daily meal scheduling, and real-time calorie tracking. Built with modern React and TypeScript practices.',
   image: project1,
@@ -20,7 +30,7 @@ const projects = [
 }
 ,
   {
-    id: 2,
+    id: 3,
     title: 'Gemini clone',
     description:'Gemini is a modern chatbot built with React and Vite, featuring a user-friendly chat interface, NLP-powered responses, and interactive features. For locations where the API is unavailable, video recordings were used to demonstrate the functionality. Designed for responsiveness and accessibility, Gemini provides an engaging chat experience across all devices.',
     image: project2,
@@ -29,7 +39,7 @@ const projects = [
     githubUrl: 'https://github.com/prathibha-bollu/Gemini_clone_updated'
   },
    {
-   id: 3,
+   id: 4,
   title: 'Education Website',
   description: 'A React-based education platform showcasing programs, campus facilities, testimonials, and contact information. The website is fully responsive, providing an optimal experience across desktops, tablets, and mobile devices. Features include program listings, about us, campus virtual tour, student testimonials, and a contact form with Web3Forms integration.',
   image: project4,
@@ -38,7 +48,7 @@ const projects = [
     githubUrl: 'https://github.com/prathibha-bollu/Responsive_edu_website'
   },
   {
-  id: 4,
+  id: 5,
   title: 'Speech to Text Converter',
     description: 'A web application that transcribes spoken words into text in real-time using the Web Speech API. It includes start/stop controls, microphone permission prompts, and live transcription. Designed with a clean, responsive interface, users can effortlessly edit, copy, or clear the transcribed text.',
   image: project3, // replace with your speech-to-text image variable
