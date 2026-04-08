@@ -50,7 +50,7 @@ const AboutSection = () => {
                 Software Developer & UX Enthusiast
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                I am a Software Developer with 3+ years of experience building scalable, 
+                I am a Software Developer building scalable, 
                 interactive web applications using JavaScript, React, PHP, and MySQL. 
                 Skilled in both frontend and backend development, with hands-on exposure 
                 to LLMs/AI integrations and API development.
