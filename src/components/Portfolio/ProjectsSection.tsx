@@ -13,7 +13,7 @@ const projects = [
   id: 1,
   title: 'Food Scanner - AI Nutritional Grading App',
   description: 'A mobile app that helps users make healthier food choices by scanning barcodes or entering food manually. It uses AI to analyze nutritional data and instantly assign a health grade (A–D). Designed for elderly users, parents, diabetics, and health-conscious individuals.',
-  image: project1, // replace with your actual image if you have one
+  image: Project_5, // replace with your actual image if you have one
   technologies: [ 'React Native (Expo)', 'FastAPI','MongoDB','Google Gemini AI' ],
   demoUrl: 'https://drive.google.com/file/d/1_BnstK_9LTBWQ24kJJYy-o2shf9ZlUmJ/view?usp=sharing',
   githubUrl: 'https://github.com/prathibha-bollu/Food_scaning'
